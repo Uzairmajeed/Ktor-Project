@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#B0000000">
+
+
+    <!-- Image View - 70% of the screen -->
+    <!-- Text View - Title -->
+
+    <!-- Text View - Year -->
+
+    <!-- Text View - Comedy -->
+
+    <!-- Text View - Description -->
+
+    <!-- Button - Watch Now -->
+
+    <!-- Button - + Sign -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_launcher_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="#148CB1"
+        android:textSize="25sp"
+        android:textStyle="italic|bold"
+        tools:layout_editor_absoluteY="299dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/yearTextView"/>
+
+
+    <TextView
+        android:id="@+id/yearTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year ."
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="italic|bold"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="333dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <TextView
+        android:id="@+id/ratingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#97000000"
+        android:padding="6dp"
+        android:text="Rating ."
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintEnd_toStartOf="@id/comedyTextView"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toEndOf="@id/languageTextView"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <TextView
+        android:id="@+id/comedyTextView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:padding="6dp"
+        android:text="Comedy ."
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintEnd_toStartOf="@id/DramedyTextView"
+        app:layout_constraintStart_toEndOf="@id/ratingTextView"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <TextView
+        android:id="@+id/languageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:padding="6dp"
+        android:text="Language  ."
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintStart_toEndOf="@id/yearTextView"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <TextView
+        android:id="@+id/DramedyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:padding="6dp"
+        android:text="Dramedy"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/comedyTextView"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="Description"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="italic|bold"
+        tools:layout_editor_absoluteY="376dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yearTextView"/>
+
+    <Button
+        android:id="@+id/watchNowButton"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@color/white"
+        android:text="> Watch Now"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/plusButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descriptionTextView"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"/>
+
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:backgroundTint="#61FFFFFF"
+        android:text="+"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/watchNowButton" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#0B0101"
+        tools:layout_editor_absoluteY="505dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/watchNowButton"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

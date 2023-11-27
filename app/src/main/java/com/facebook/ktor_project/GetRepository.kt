@@ -3,10 +3,7 @@ package com.facebook.ktor_project
 import io.ktor.client.HttpClient
 import io.ktor.client.call.receive
 import io.ktor.client.engine.android.Android
-import io.ktor.client.features.HttpRedirect
 import io.ktor.client.request.get
-import io.ktor.client.request.post
-import io.ktor.client.request.url
 import io.ktor.client.statement.HttpResponse
 
 class GetRepository {

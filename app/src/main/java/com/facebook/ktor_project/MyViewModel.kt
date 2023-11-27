@@ -8,16 +8,15 @@ import androidx.lifecycle.ViewModel
 class MyViewModel : ViewModel() {
     private val network = Network()
 
-    // MutableLiveData to hold the Post data
-    private val _postLiveData = MutableLiveData<Post?>()
+    // MutableLiveData to hold the list of Post data
+    private val _postListLiveData = MutableLiveData<List<Post?>>()
 
     // Expose an immutable LiveData to be observed by the UI
-    val postLiveData: LiveData<Post?> get() = _postLiveData
+    val postListLiveData: LiveData<List<Post?>> get() = _postListLiveData
 
     suspend fun fetchFromModel() {
-        val post = network.fetchData()
-        _postLiveData.postValue(post)
-
+        val postList = network.fetchData()
+        _postListLiveData.postValue(postList)
     }
-
 }
+

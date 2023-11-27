@@ -4,160 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B0000000"
     tools:context=".MainActivity">
 
-    <!-- Image View - 70% of the screen -->
-    <!-- Text View - Title -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-    <!-- Text View - Year -->
-
-    <!-- Text View - Comedy -->
-
-    <!-- Text View - Description -->
-
-    <!-- Button - Watch Now -->
-
-    <!-- Button - + Sign -->
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="411dp"
-        android:layout_height="299dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@id/titleTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-    <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Title"
-        android:textColor="#148CB1"
-        android:textSize="25sp"
-        android:textStyle="italic|bold"
-        app:layout_constraintBottom_toTopOf="@id/yearTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView" />
-
-
-    <TextView
-        android:id="@+id/yearTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Year ."
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="italic|bold"
-        app:layout_constraintBottom_toTopOf="@id/descriptionTextView"
-        app:layout_constraintEnd_toStartOf="@id/languageTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
-
-    <TextView
-        android:id="@+id/ratingTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="#97000000"
-        android:padding="6dp"
-        android:text="Rating ."
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        android:textStyle="italic|bold"
-        app:layout_constraintEnd_toStartOf="@id/comedyTextView"
-        app:layout_constraintStart_toEndOf="@id/languageTextView"
-        app:layout_constraintTop_toBottomOf="@id/imageView" />
-
-    <TextView
-        android:id="@+id/comedyTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:padding="6dp"
-        android:text="Comedy ."
-        android:textColor="@color/black"
-        android:textSize="17sp"
-        android:textStyle="italic|bold"
-        app:layout_constraintEnd_toStartOf="@id/DramedyTextView"
-        app:layout_constraintStart_toEndOf="@id/ratingTextView"
-        app:layout_constraintTop_toBottomOf="@id/imageView" />
-
-    <TextView
-        android:id="@+id/languageTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:padding="6dp"
-        android:text="Language  ."
-        android:textColor="@color/black"
-        android:textSize="17sp"
-        android:textStyle="italic|bold"
-        app:layout_constraintEnd_toStartOf="@id/ratingTextView"
-        app:layout_constraintStart_toEndOf="@id/yearTextView"
-        app:layout_constraintTop_toBottomOf="@id/imageView" />
-
-    <TextView
-        android:id="@+id/DramedyTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:padding="6dp"
-        android:text="Dramedy"
-        android:textColor="@color/black"
-        android:textSize="17sp"
-        android:textStyle="italic|bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/comedyTextView"
-        app:layout_constraintTop_toBottomOf="@id/imageView" />
-
-    <TextView
-        android:id="@+id/descriptionTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:padding="6dp"
-        android:text="Description"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="italic|bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/yearTextView" />
-
-    <Button
-        android:id="@+id/watchNowButton"
-        android:layout_width="274dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="292dp"
-        android:backgroundTint="@color/white"
-        android:text="> Watch Now"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/plusButton"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView"
-        app:layout_constraintVertical_bias="0.956" />
-
-    <Button
-        android:id="@+id/plusButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="292dp"
-        android:backgroundTint="@color/white"
-        android:text="+"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.848"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView"
-        app:layout_constraintVertical_bias="0.956" />
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

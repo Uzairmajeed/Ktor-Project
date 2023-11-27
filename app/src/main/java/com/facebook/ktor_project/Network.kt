@@ -6,25 +6,35 @@ import com.google.gson.JsonObject
 import com.google.gson.JsonParser
 
 class Network {
-    private val getRepository=GetRepository()
-    suspend fun fetchData(): Post? {
+    private val getRepository = GetRepository()
+
+    suspend fun fetchData(): List<Post?> {
         return try {
-            val responseBody =  getRepository.getFromServer()
+            val responseBody = getRepository.getFromServer()
             Log.e("Network", responseBody.toString())
             val jsonParser = JsonParser()
             val jsonObject = jsonParser.parse(responseBody) as JsonObject
             val resultsArray = jsonObject.getAsJsonArray("results")
-            // Assuming you want the first item from the results array
-            val firstResult = resultsArray.get(0).asJsonObject
+            val posts = mutableListOf<Post?>()
 
-            val post = Gson().fromJson(firstResult, Post::class.java)
-            post
+            for (i in 0 until resultsArray.size()) {
+                val result = resultsArray.get(i).asJsonObject
+                val post = try {
+                    Gson().fromJson(result, Post::class.java)
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    Log.e("Network", "Exception: ${e.message}")
+                    null
+                }
+                post?.let { posts.add(it) } // Add non-null posts to the list
+            }
+            posts
         } catch (e: Exception) {
             e.printStackTrace()
             Log.e("Network", "Exception: ${e.message}")
-            null
+            emptyList() // Return an empty list in case of an exception
         }
     }
 
-
 }
+
