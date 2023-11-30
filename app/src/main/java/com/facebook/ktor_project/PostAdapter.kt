@@ -9,8 +9,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class PostAdapter(private var postList: List<Post?>) : RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
+
+
 
     // ViewHolder class to hold references to views for each item
     class PostViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -23,8 +26,7 @@ class PostAdapter(private var postList: List<Post?>) : RecyclerView.Adapter<Post
         val DramedyTextView: TextView = itemView.findViewById(R.id.DramedyTextView)
         val descriptionTextView: TextView = itemView.findViewById(R.id.descriptionTextView)
         val ratingTextView: TextView = itemView.findViewById(R.id.ratingTextView)
-
-        // Add other views as needed
+         // Add other views as needed
     }
 
     // Inflate the item_post.xml layout for each item and return a ViewHolder
